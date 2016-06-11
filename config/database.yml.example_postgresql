@@ -24,7 +24,7 @@ development:
   host: localhost
   #port: 5432
 
-  # Schema search path. The server defaults to $user,public
+  # Schema search path. The server defaults to $customer,public
   #schema_search_path: myapp,sharedapp,public
 
   # Minimum log levels, in increasing order:
