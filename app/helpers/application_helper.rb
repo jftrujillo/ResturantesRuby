@@ -6,7 +6,7 @@ module ApplicationHelper
   # Devise anywhere session stuff
   #
   def resource_name
-    :user
+    :customer
   end
 
   #
@@ -20,6 +20,6 @@ module ApplicationHelper
   # trick for expose devise resource
   #
   def devise_mapping
-    @devise_mapping ||= Devise.mappings[:user]
+    @devise_mapping ||= Devise.mappings[:customer]
   end
 end

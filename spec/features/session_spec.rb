@@ -2,14 +2,14 @@ require 'rails_helper'
 
 feature 'Session' do
   before do
-    create :user
+    create :customer
   end
 
   scenario 'logs into new session' do
-    visit '/users/sign_in'
-    within '#new_user' do
-      fill_in 'user[email]', with: Customer.first.email
-      fill_in 'user[password]', with: '123456789'
+    visit '/customers/sign_in'
+    within '#new_customer' do
+      fill_in 'customer[email]', with: Customer.first.email
+      fill_in 'customer[password]', with: '123456789'
     end
     click_button 'Sign In'
     expect(page).to have_content 'Foo Application'
