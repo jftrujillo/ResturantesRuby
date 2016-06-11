@@ -13,7 +13,7 @@ module ApplicationHelper
   # expose devise resource for using in another controller
   #
   def resource
-    @resource ||= User.new
+    @resource ||= Customer.new
   end
 
   #

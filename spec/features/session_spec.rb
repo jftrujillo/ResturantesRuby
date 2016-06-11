@@ -8,7 +8,7 @@ feature 'Session' do
   scenario 'logs into new session' do
     visit '/users/sign_in'
     within '#new_user' do
-      fill_in 'user[email]', with: User.first.email
+      fill_in 'user[email]', with: Customer.first.email
       fill_in 'user[password]', with: '123456789'
     end
     click_button 'Sign In'

@@ -1,5 +1,5 @@
-# User model wrapped by the devise gem
-class User < ActiveRecord::Base
+# Customer model wrapped by the devise gem
+class Customer < ActiveRecord::Base
 
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable

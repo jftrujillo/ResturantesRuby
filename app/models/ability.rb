@@ -5,12 +5,12 @@ class Ability
   #
   # Use this for configuring your abilities
   #
-  # @param [User] user
+  # @param [Customer] user
   #
   def initialize(user)
     # Define abilities for the passed in user here. For example:
     #
-    #   user ||= User.new # guest user (not logged in)
+    #   user ||= Customer.new # guest user (not logged in)
     #   if user.admin?
     #     can :manage, :all
     #   else
