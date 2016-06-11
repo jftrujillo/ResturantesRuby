@@ -427,7 +427,7 @@ GEM
       json (~> 1.7, >= 1.7.7)
       rdoc (~> 4.0)
     secure_headers (2.5.1)
-      customer_agent_parser
+      user_agent_parser
     sexp_processor (4.6.1)
     shellany (0.0.1)
     shog (0.1.6)
@@ -477,7 +477,7 @@ GEM
       rack
       raindrops (~> 0.7)
     uniform_notifier (1.9.0)
-    customer_agent_parser (2.3.0)
+    user_agent_parser (2.3.0)
     vcr (3.0.1)
     virtus (1.0.5)
       axiom-types (~> 0.1)
