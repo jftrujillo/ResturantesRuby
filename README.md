@@ -21,7 +21,7 @@ El Sistema cuenta con un módulo de clientes particular para validar/reconocer l
 
 ```
 Tabla: customer
-iduser int not null autoincrement PK,
+idcustomer int not null autoincrement PK,
 name varchar(150),
 lastname varchar(150),
 docid varchar(20) not null,
@@ -31,8 +31,8 @@ email varchar(180)
 Cada cliente se registra a sí mismo, sin embargo, debe existir algún mecanismo que verifique la existencia previa del cliente en el sistema.
 En cuanto a los usuarios del sistema como tal, deben seguir la siguiente estructura de información:
 ```
-Tabla: user
-iduser int not null autoincrement PK,
+Tabla: customer
+idcustomer int not null autoincrement PK,
 name varchar(150) not null,
 lastname varchar(150) not null,
 docid varchar(20) not null,
