@@ -24,9 +24,6 @@ module Sassish
       added_style_resources.unshift dynamic_stylesheet_resource if sassish_stylesheet_resource_exists? stylesheet_resource_full_path
       added_style_resources.unshift manifest
 
-      binding.pry
-      1
-
       # Invokes the real stylesheet_link_tag
       stylesheet_link_tag(*added_style_resources, options)
     end
