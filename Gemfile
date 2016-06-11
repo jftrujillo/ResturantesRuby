@@ -39,6 +39,8 @@ gem 'cancancan', '~> 1.13.1'
 gem 'secure_headers', '~> 2.5.0'
 gem 'autoprefixer-rails', '~> 6.3.1'
 
+gem 'money-rails'
+
 # Comment/Uncomment depending on what database your going to use
 #gem 'mysql2'
 gem 'pg', '~> 0.18.2'
