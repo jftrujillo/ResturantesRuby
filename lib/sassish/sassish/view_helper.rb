@@ -9,10 +9,12 @@ module Sassish
     # @param [ Hash ] options, common options for the stylesheet_link_tag helper
     #
     def sassish_stylesheet_link_tag(manifest, options = {})
+
       # Relative path to the stylesheet by a specfic controller
       dynamic_stylesheet_resource = File.join(Sassish.relative_stylesheet_directory_path, controller_name.to_s)
       # we need the complete path for checking if the real stylesheet resource exists
       stylesheet_resource_full_path = File.join(Rails.root, Sassish.relative_root_for_stylesheets, "#{dynamic_stylesheet_resource}.#{Rails.configuration.sass.preferred_syntax}")
+      
       # Dealing with digest issue if it is enabled
       dynamic_stylesheet_resource = Rails.application.config.assets.digest ? asset_path(dynamic_stylesheet_resource) : dynamic_stylesheet_resource
       # Resources from added_sassish_stylesheets
@@ -21,6 +23,10 @@ module Sassish
       # Essential stylesheet files (please note that the order is important)
       added_style_resources.unshift dynamic_stylesheet_resource if sassish_stylesheet_resource_exists? stylesheet_resource_full_path
       added_style_resources.unshift manifest
+
+      binding.pry
+      1
+
       # Invokes the real stylesheet_link_tag
       stylesheet_link_tag(*added_style_resources, options)
     end
