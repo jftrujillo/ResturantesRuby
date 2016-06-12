@@ -11,6 +11,9 @@
     = render 'layouts/navigation'
   %main{:role => "main"}
     = render 'layouts/messages'
-    = yield
+    .container
+      .row
+        .col-md-12
+          = yield
 
 = render template: 'layouts/root'
