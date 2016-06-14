@@ -34,4 +34,12 @@ RailsAdmin.config do |config|
     # history_index
     # history_show
   end
+
+  # config.model 'Product' do
+  #   configure :price, :decimal do
+  #     pretty_value do
+  #       humanized_money value + ' COP'
+  #     end
+  #   end
+  # end
 end
