@@ -8,5 +8,5 @@ Rails.configuration.sass.preferred_syntax = "sass"
 
 # Precompile additional assets.
 # application.js, application.css, and all non-JS/CSS in app/assets folder are already added.
-Rails.application.config.assets.precompile += %w( application-welcome.css application-session.css )
-Rails.application.config.assets.precompile += %w( main/styles/products.css )
+Rails.application.config.assets.precompile += %w( main/styles/orders.css  application-welcome.css application-session.css )
+Rails.application.config.assets.precompile += %w( main/styles/orders.css  main/styles/products.css )
