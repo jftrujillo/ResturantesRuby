@@ -1,4 +1,14 @@
 GIT
+  remote: git://github.com/RubyMoney/money-rails.git
+  revision: ecd4ff23c9f577b714aa8e870cf9793f35af6b06
+  specs:
+    money-rails (1.6.1)
+      activesupport (>= 3.0)
+      monetize (~> 1.4.0)
+      money (~> 6.7)
+      railties (>= 3.0)
+
+GIT
   remote: git://github.com/jkrmr/jazz_hands.git
   revision: 5d672e52772d9abf4064260186556fa963a75604
   specs:
@@ -272,17 +282,12 @@ GEM
     method_source (0.8.2)
     mime-types (1.25.1)
     mini_portile2 (2.0.0)
-    minitest (5.8.4)
+    minitest (5.9.0)
     monetize (1.4.0)
       money (~> 6.7)
     money (6.7.1)
       i18n (>= 0.6.4, <= 0.7.0)
       sixarm_ruby_unaccent (>= 1.1.1, < 2)
-    money-rails (1.6.1)
-      activesupport (>= 3.0)
-      monetize (~> 1.4.0)
-      money (~> 6.7)
-      railties (>= 3.0)
     multi_json (1.11.2)
     nenv (0.2.0)
     nested_form (0.3.2)
@@ -396,7 +401,7 @@ GEM
       thor (>= 0.18.1, < 2.0)
     rainbow (2.1.0)
     raindrops (0.15.0)
-    rake (10.5.0)
+    rake (11.2.2)
     rake-compiler (0.9.5)
       rake
     rb-fsevent (0.9.7)
@@ -565,8 +570,9 @@ DEPENDENCIES
   launchy (~> 2.4.3)
   less-rails (~> 2.7.1)
   meta_request
-  money-rails
+  money-rails!
   newrelic_rpm (~> 3.14.2.312)
+  nokogiri (= 1.6.7.2)
   pg (~> 0.18.2)
   poltergeist (~> 1.8.1)
   quiet_assets (~> 1.1.0)
@@ -602,4 +608,4 @@ RUBY VERSION
    ruby 2.3.0p0
 
 BUNDLED WITH
-   1.12.3
+   1.12.5

@@ -2,8 +2,6 @@ RailsAdmin.config do |config|
 
   ### Popular gems integration
 
-
-
   ## == Devise ==
    config.authenticate_with do
      warden.authenticate! scope: :admin
@@ -40,7 +38,7 @@ RailsAdmin.config do |config|
   # config.model 'Product' do
   #   configure :price, :decimal do
   #     pretty_value do
-  #       humanized_money value + ' COP'
+  #       humanized_money_value + ' COP'
   #     end
   #   end
   # end

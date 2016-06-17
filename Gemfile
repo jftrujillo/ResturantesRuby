@@ -40,11 +40,14 @@ gem 'cancancan', '~> 1.13.1'
 gem 'secure_headers', '~> 2.5.0'
 gem 'autoprefixer-rails', '~> 6.3.1'
 
-gem 'money-rails'
+gem 'money-rails', github: 'RubyMoney/money-rails'
 
 # Comment/Uncomment depending on what database your going to use
 #gem 'mysql2'
 gem 'pg', '~> 0.18.2'
+
+# Nokogiri lock
+gem 'nokogiri', '1.6.7.2'
 
 group :development do
   gem 'guard', '~> 2.13.0'
