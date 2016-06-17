@@ -7,12 +7,12 @@ class Ability
   #
   # @param [Customer] customer
   #
-  def initialize(customer)
+  def initialize(admin)
     # Define abilities for the passed in customer here. For example:
     #
     #   customer ||= Customer.new # guest customer (not logged in)
     #   if customer.admin?
-    #     can :manage, :all
+         can :manage, :all
     #   else
     #     can :read, :all
     #   end
