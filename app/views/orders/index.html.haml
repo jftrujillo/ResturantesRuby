@@ -3,15 +3,17 @@
 %table.table.table-striped
   %thead
     %tr
-      %th
+      %th Number of order
+      %th Customer
       %th
       %th
 
   %tbody
     - @orders.each do |order|
       %tr
+        %td= order.id
+        %td= Customer.find(order.customer_id).email
         %td= link_to 'Show', order
-        %td= link_to 'Edit', edit_order_path(order)
         %td= link_to 'Destroy', order, :method => :delete, :data => { :confirm => 'Are you sure?' }
 
 %br

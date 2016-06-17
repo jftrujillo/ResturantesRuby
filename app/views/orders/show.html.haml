@@ -1,6 +1,36 @@
 %p#notice= notice
 
+%p
+  %b Customer:
+  = Customer.find(@order.customer_id).email
+%p
+
+%table.table.table-striped
+  %thead
+    %tr
+      %th Number of order
+      %th Customer
+      %th Price
+      %th
+      %th
+
+  %tbody
+    - @order.products.each do |product|
+      %tr
+
+        %td= product.name
+        %td= product.description
+        %td= product.price
+
+
+
+%br
+
+
 
 = link_to 'Edit', edit_order_path(@order)
 \|
-= link_to 'Back', orders_path
+-if customer_signed_in?
+  = link_to 'Back', root_path
+-if chef_signed_in?
+  = link_to 'Back', orders_path

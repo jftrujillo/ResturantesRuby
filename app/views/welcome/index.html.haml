@@ -1,35 +1,44 @@
-- content_for :title, 'Welcome Page'
+- content_for :title, 'Restaurantes Web'
 .site-wrapper
   .site-wrapper-inner
     .cover-container
       .masthead.clearfix
         .inner
-          %h3.masthead-brand= t(".generic")
+          %h3.masthead-brand= t(".Bievenido")
           %ul.nav.masthead-nav
             - if customer_signed_in?
               %li
-                = "You are logged in as #{current_customer.email}"
+                = "You are logged in as #{current_customer.email} (customer)"
               %li.active
                 = link_to t('navigation.logout'), destroy_customer_session_path, :method=>'delete'
-            - else
               %li.active
-                %a{:href => "#"}= t(".home")
+              = link_to t('navigation.new orden'), new_order_url
+            - if chef_signed_in?
               %li
-                %a{:href => "#"}= t(".about_us")
-              %li
-                %a{:href => "#"}= t(".contact")
+                = "You are logged in as #{current_chef.email} (chef)"
+              %li.active
+
+                = link_to t('navigation.logout'), destroy_chef_session_path, :method=>'delete'
+
+              %li.active
+
+              %li.active
+              = link_to t('navigation.See Orders'), orders_url
+
       .inner.cover
-        %i.fa.fa-camera-retro
-        %h1.cover-heading= t(".demo_application")
-        %p.lead= t(".demo_app_description")
+
+        %h1.cover-heading= t(".Restaurantes app")
+        %p.lead= t(".Aplicacion con fines academicos de la universidad del cauca usando Ruby On Rails")
         %p.lead
-          %a.btn.btn-lg.btn-primary{:href => new_customer_session_path}= t(".sign_in")
+          %a.btn.btn-lg.btn-primary{:href => new_customer_session_path}= t(".sign_in like customer")
+          %a.btn.btn-lg.btn-primary{:href => new_chef_session_path}= t(".sign_in like chef")
+
       .mastfoot
         .inner
           %p
             = t(".all_rights_reserved")
             = succeed "," do
-              %a.test-auto-prefixer{:href => "#"}= t(".generic")
+              %a.test-auto-prefixer{:href => "#"}= t(".Jhon Fredy Trujillo Ortega")
 
 :javascript
   RailsFoo.welcome.setup()

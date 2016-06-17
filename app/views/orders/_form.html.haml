@@ -1,7 +1,9 @@
 = simple_form_for(@order) do |f|
   = f.error_notification
-
+  = f.association :products, as: :check_boxes
   .form-inputs
 
   .form-actions
     = f.button :submit
+
+
